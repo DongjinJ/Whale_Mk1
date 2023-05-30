@@ -13,6 +13,7 @@ RM := rm -rf
 -include Core/Startup/subdir.mk
 -include Core/Src/Service/Sch/SchLi/subdir.mk
 -include Core/Src/Service/Sch/subdir.mk
+-include Core/Src/Service/AppFunc/subdir.mk
 -include Core/Src/subdir.mk
 -include subdir.mk
 -include objects.mk

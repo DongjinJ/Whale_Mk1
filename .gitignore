@@ -1,2 +1,9 @@
 *.o
 *.d
+
+*.bin
+*.elf
+*.list
+*.map
+
+STM_Whale_Mk1/Debug/
