@@ -1,3 +1,4 @@
+"Core/Src/Service/AppFunc/AppFunc.o"
 "Core/Src/Service/Sch/SchLi/SchTaskLi.o"
 "Core/Src/Service/Sch/SchTask.o"
 "Core/Src/main.o"

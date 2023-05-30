@@ -20,6 +20,7 @@ OBJCOPY_BIN :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Core/Src/Service/AppFunc \
 Core/Src/Service/Sch/SchLi \
 Core/Src/Service/Sch \
 Core/Src \
