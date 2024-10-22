@@ -1,4 +1,0 @@
-SchTask.c:8:6:SchTask_Init	8	static
-SchTask.c:28:6:SchTask_Background	16	static
-SchTask.c:42:6:SchTask_TimeManager	16	static
-SchTask.c:62:13:SchTask_Cfg	24	static
