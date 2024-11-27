@@ -48,8 +48,10 @@ MEMORY
   FLASH  (rx)    : ORIGIN = 0x08000000, LENGTH = 1024K    /* Memory is divided. Actual start is 0x08000000 and actual length is 2048K */
   DTCMRAM (xrw)  : ORIGIN = 0x20000000, LENGTH = 128K
   RAM_D2 (xrw)   : ORIGIN = 0x30000000, LENGTH = 288K
-  RAM_D3 (xrw)   : ORIGIN = 0x38000000, LENGTH = 64K
+  
   ITCMRAM (xrw)  : ORIGIN = 0x00000000, LENGTH = 64K
+  
+  SHARED_RAM (xrw)   : ORIGIN = 0x38000000, LENGTH = 64K
 }
 
 /* Sections */
@@ -165,6 +167,21 @@ SECTIONS
     _ebss = .;         /* define a global symbol at bss end */
     __bss_end__ = _ebss;
   } >RAM_D1
+  
+  /* Uninitialized data section into "RAM" Ram type memory */
+  . = ALIGN(4);
+  .bss :
+  {
+    /* This is used by the startup in order to initialize the .bss section */
+    _shared_ram_sbss = .;         /* define a global symbol at bss start */
+    _shared_ram_bss_start__ = _sbss;
+    *(.shared_bss)
+    *(.shared_bss*)
+
+    . = ALIGN(4);
+    _shared_ram_ebss = .;         /* define a global symbol at bss end */
+    _shared_ram_bss_end__ = _ebss;
+  } >SHARED_RAM
 
   /* User_heap_stack section, used to check that there is enough "RAM" Ram  type memory left */
   ._user_heap_stack :

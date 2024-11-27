@@ -11,6 +11,7 @@
 
 #include "../Inc/main.h"
 #include "../../PrjCfg_M4/PrjSch_M4.h"
+#include "../../../../Common/Service/Ipc/IpcMain.h"
 
 extern void AppMon_Cal_CpuLoad_M4(void);
 extern uint16_t AppMon_Get_CpuLoad_M4(void);
