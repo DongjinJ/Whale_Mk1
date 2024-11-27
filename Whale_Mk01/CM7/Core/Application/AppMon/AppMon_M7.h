@@ -11,6 +11,7 @@
 
 #include "../Inc/main.h"
 #include "../../PrjCfg_M7/PrjSch_M7.h"
+#include "../../../../Common/Service/Ipc/IpcMain.h"
 
 extern void AppMon_Cal_CpuLoad_M7(void);
 #endif /* APPLICATION_APPMON_APPMON_M7_H_ */
